@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import App from './App';
 import { store } from './app/store';
-import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import {theme} from './theme'
 
 const GlobalStyle = createGlobalStyle`
   :root {
