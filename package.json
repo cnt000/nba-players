@@ -24,22 +24,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-all": "yarn lint && yarn type-check && yarn test",
+    "test-all": "yarn lint && yarn type-check && yarn test --watchAll=false",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test-all"
-    }
-  },
-  "lint-staged": {
-    "*.@(ts|tsx|js)": [
-      "yarn lint",
-      "yarn format"
-    ]
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
