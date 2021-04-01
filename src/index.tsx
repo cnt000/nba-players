@@ -7,7 +7,7 @@ import { store } from './state/store'
 import * as serviceWorker from './serviceWorker'
 import { theme } from './styles/theme'
 import { GlobalStyle } from './styles/GlobalStyle'
-import 'fontsource-roboto';
+import 'fontsource-roboto'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -3,7 +3,7 @@ import { render } from '../../test/testUtils'
 import Example from './Example'
 
 const labels = {
-  testLabel: 'hello king'
+  testLabel: 'hello king',
 }
 
 const Component = <Example id={'test'} labels={labels} />

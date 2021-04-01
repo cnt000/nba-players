@@ -24,7 +24,3 @@ export const StyledHeader = styled.header`
   justify-content: center;
   font-size: calc(10px + 2vmin);
 `
-
-export const StyledLink = styled.a`
-  color: rgb(112, 76, 182);
-`
