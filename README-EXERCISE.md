@@ -11,6 +11,7 @@ For this assignment what you will build is a single page application with React 
 You will consume this free API: https://www.balldontlie.io/
 
 Endpoints needed to complete the assessment:
+
 - Players list: GET https://www.balldontlie.io/api/v1/players
 - Player stats: GET https://www.balldontlie.io/api/v1/season_averages
 - Player pic: GET https://nba-players.herokuapp.com/players/{last_name}/{first_name} (You will have to manage the not found case)
@@ -23,6 +24,7 @@ We want to have an homepage with a search input that lets the user search for a 
 Once the user has found the player, after clicking on it, is brought to a detail page of the player where he will be able to see the generic info of the player (the ones we get from the players list api).
 
 If you are willing to go the extra mile, you could extend the detail page to include also the following information:
+
 - A picture of the player
 - The player's season averages stats
 
