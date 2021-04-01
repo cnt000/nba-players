@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import App from './components/App'
-import { store } from './app/store'
+import { store } from './state/store'
 import * as serviceWorker from './serviceWorker'
 import { theme } from './styles/theme'
 import { GlobalStyle } from './styles/GlobalStyle'
+import 'fontsource-roboto';
 
 ReactDOM.render(
   <React.StrictMode>

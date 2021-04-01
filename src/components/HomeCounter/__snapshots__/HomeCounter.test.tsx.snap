@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdDrOH dJQgrP"
+  >
+    <header
+      class="sc-dkXqmJ gnCqVg"
+    >
+      <img
+        alt="logo"
+        class="sc-gtczok hodEzD"
+        src="logo.svg"
+      />
+      <div>
+        <div
+          class="row"
+        >
+          <button
+            aria-label="Increment value"
+            class="button"
+          >
+            +
+          </button>
+          <span
+            class="value"
+          >
+            0
+          </span>
+          <button
+            aria-label="Decrement value"
+            class="button"
+          >
+            -
+          </button>
+        </div>
+        <div
+          class="row"
+        >
+          <input
+            aria-label="Set increment amount"
+            class="textbox"
+            value="2"
+          />
+          <button
+            class="button"
+          >
+            Add Amount
+          </button>
+          <button
+            class="asyncButton"
+          >
+            Add Async
+          </button>
+        </div>
+      </div>
+      <p>
+        Edit 
+        <code>
+          src/App.tsx
+        </code>
+         and save to reload.
+      </p>
+      <span>
+        <span>
+          Learn 
+        </span>
+        <a
+          href="https://reactjs.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          React
+        </a>
+        <span>
+          , 
+        </span>
+        <a
+          href="https://redux.js.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Redux
+        </a>
+        <span>
+          , 
+        </span>
+        <a
+          class="sc-hKVsly hCJzeS App-Styledlink"
+          href="https://redux-toolkit.js.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Redux Toolkit
+        </a>
+        ,
+        <span>
+           and 
+        </span>
+        <a
+          class="sc-hKVsly hCJzeS App-link"
+          href="https://react-redux.js.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          React Redux
+        </a>
+      </span>
+    </header>
+  </div>
+</DocumentFragment>
+`;
