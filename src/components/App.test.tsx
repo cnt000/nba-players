@@ -15,5 +15,5 @@ test('renders learn react link', () => {
     </ThemeProvider>
   )
 
-  expect(getByText(/learn/i)).toBeInTheDocument()
+  expect(getByText(/Player/i)).toBeInTheDocument()
 })
