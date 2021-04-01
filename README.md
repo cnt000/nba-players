@@ -42,3 +42,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Endpoints
+
+https://www.balldontlie.io/api/v1/players?search=pippen -> search
+https://www.balldontlie.io/api/v1/players/2933 -> pippen
+
+https://www.balldontlie.io/api/v1/season_averages?season=2018&player_ids[]=1&player_ids[]=2933 -> years?
+
+https://nba-players.herokuapp.com/players/curry/stephen -> photo (with not found)
