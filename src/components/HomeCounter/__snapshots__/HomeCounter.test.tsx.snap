@@ -62,51 +62,22 @@ exports[`Counter matches snapshot 1`] = `
         </code>
          and save to reload.
       </p>
-      <span>
-        <span>
-          Learn 
-        </span>
-        <a
-          href="https://reactjs.org/"
-          rel="noopener noreferrer"
-          target="_blank"
+      <div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          tabindex="0"
+          type="button"
         >
-          React
-        </a>
-        <span>
-          , 
-        </span>
-        <a
-          href="https://redux.js.org/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Redux
-        </a>
-        <span>
-          , 
-        </span>
-        <a
-          class="sc-hKVsly hCJzeS App-Styledlink"
-          href="https://redux-toolkit.js.org/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Redux Toolkit
-        </a>
-        ,
-        <span>
-           and 
-        </span>
-        <a
-          class="sc-hKVsly hCJzeS App-link"
-          href="https://react-redux.js.org/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          React Redux
-        </a>
-      </span>
+          <span
+            class="MuiButton-label"
+          >
+            Hello World
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
     </header>
   </div>
 </DocumentFragment>
