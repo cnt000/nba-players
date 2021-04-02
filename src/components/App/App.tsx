@@ -1,7 +1,7 @@
 import React from 'react'
-import { Router} from '@reach/router'
- import Home from '../../pages/Home'
- import Player from '../../pages/Player'
+import { Router } from '@reach/router'
+import Home from '../../pages/Home'
+import Player from '../../pages/Player'
 
 function App() {
   return (
