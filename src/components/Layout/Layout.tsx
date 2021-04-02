@@ -21,8 +21,7 @@ const Layout: React.FC<Props> = ({ children, title = 'title' }: Props) => {
       <div>
         <h2>{title}</h2>
         <nav>
-          <Link to="/">Home</Link> |{' '}
-          <Link to="/player/2933">Player 2933</Link>
+          <Link to="/">Home</Link> | <Link to="/player/2933">Player 2933</Link>
         </nav>
       </div>
       <main>{children}</main>

@@ -26,7 +26,6 @@ const Home: React.FC<{ path: string; page?: string }> = ({ page }) => {
     total_count: 1,
   })
 
-
   useEffect(() => {
     const loadData = async () => {
       const result = await fetch(
@@ -53,13 +52,18 @@ const Home: React.FC<{ path: string; page?: string }> = ({ page }) => {
             id="searchText"
             type="text"
             value={searchText}
-            onChange={(e) => {setSearchText(e.target.value); resetPage();}}
+            onChange={(e) => {
+              setSearchText(e.target.value)
+              resetPage()
+            }}
           />
         </form>
         <ul>
           {players.map(({ first_name, last_name, id }) => (
             <li>
-              <Link to={`/player/${id}`}>{first_name} {last_name}</Link>
+              <Link to={`/player/${id}`}>
+                {first_name} {last_name}
+              </Link>
             </li>
           ))}
         </ul>
