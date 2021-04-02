@@ -22,7 +22,6 @@ const Layout: React.FC<Props> = ({ children, title = 'title' }: Props) => {
         <h2>{title}</h2>
         <nav>
           <Link to="/">Home</Link> |{' '}
-          <Link to="/?search=pippen">Pippen search</Link> |{' '}
           <Link to="/player/2933">Player 2933</Link>
         </nav>
       </div>
