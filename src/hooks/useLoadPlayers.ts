@@ -25,19 +25,17 @@ export const useLoadPlayers = (searchText: string, aPage: number) => {
   useEffect(() => {
     const loadData = async () => {
       const result = await fetch(
-        `https://www.balldontlie.io/api/v1/players?search=${searchText}&page=${
-          aPage
-        }&per_page=25`
+        `https://www.balldontlie.io/api/v1/players?search=${searchText}&page=${aPage}&per_page=25`
       )
       const { data, meta } = await result.json()
       setPlayers(data)
       setMeta(meta)
     }
     // if (searchText.length > 1) {
-      loadData()
+    loadData()
     // }
     history.navigate(`/?page=${aPage}&search=${searchText}`)
-  }, [searchText, aPage])
+  }, [searchText, aPage, history])
 
   return { players, meta }
 }
