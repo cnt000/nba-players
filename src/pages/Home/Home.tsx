@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation,createHistory, HistorySource } from '@reach/router'
+import { Link, useLocation, createHistory, HistorySource } from '@reach/router'
 import TextField from '@material-ui/core/TextField'
 import Layout from '../../components/Layout'
 
@@ -40,7 +40,7 @@ const Home: React.FC<{ path: string; page?: string }> = () => {
       setPlayers(data)
       setMeta(meta)
     }
-    if(searchText.length > 0) {
+    if (searchText.length > 0) {
       loadData()
     }
     history.navigate(`/?page=${aPage + 1}&search=${searchText}`)
@@ -69,11 +69,15 @@ const Home: React.FC<{ path: string; page?: string }> = () => {
           ))}
         </ul>
         {aPage > 0 && (
-          <button onClick={() => setAPage(aPage - 1)}>Prev Page: {aPage - 1}</button>
+          <button onClick={() => setAPage(aPage - 1)}>
+            Prev Page: {aPage - 1}
+          </button>
         )}
         Page: {aPage}
         {aPage < meta.total_pages - 1 && (
-          <button onClick={() => setAPage(aPage + 1)}>Next Page: {aPage + 1}</button>
+          <button onClick={() => setAPage(aPage + 1)}>
+            Next Page: {aPage + 1}
+          </button>
         )}
       </>
     </Layout>
