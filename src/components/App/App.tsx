@@ -7,7 +7,6 @@ function App() {
   return (
     <Router>
       <Home path="/" />
-      <Home path="/:page" />
       <Player path="/player/:id" />
     </Router>
   )

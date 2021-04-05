@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from '@reach/router'
+import { Link, useLocation, navigate } from '@reach/router'
 
 type Props = {
   children: JSX.Element
@@ -13,7 +13,7 @@ const Layout: React.FC<Props> = ({ children, title = 'title' }: Props) => {
   return (
     <>
       <header>
-        {!isHp && <Link to="/">🔙</Link>}
+        {!isHp && <button onClick={() => navigate(-1)}>🔙</button>}
         <h1>
           <Link to="/">Home</Link>
         </h1>
