@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useLocation, navigate } from '@reach/router'
 import { StyledHeader, StyledLogo, StyledSubHeader } from './Layout.styles'
-import logo from '../../components/HomeCounter/logo.svg'
+import logo from './logo.svg'
 
 type Props = {
   children: JSX.Element

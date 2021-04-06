@@ -5,13 +5,13 @@ export interface Players {
 
 export interface Player {
   id: number
-  firstName: string
-  heightFeet?: number | null
-  heightInches?: number | null
-  lastName: string
+  first_name: string
+  height_feet?: number | null
+  height_inches?: number | null
+  last_name: string
   position?: string
   team?: Team
-  weightPounds?: number | null
+  weight_pounds?: number | null
 }
 
 export interface Team {
@@ -20,7 +20,7 @@ export interface Team {
   city?: string
   conference?: Conference
   division?: string
-  fullName?: string
+  full_name?: string
   name?: string
 }
 
@@ -30,9 +30,9 @@ export enum Conference {
 }
 
 export interface Meta {
-  totalPages?: number
-  currentPage?: number
-  nextPage?: number
-  perPage?: number
-  totalCount?: number
+  total_pages: number
+  current_page: number
+  next_page: number
+  per_page: number
+  total_count: number
 }

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useLocation } from '@reach/router'
 import { useLoadPlayers } from '../../hooks/useLoadPlayers'
 import Pagination from '@material-ui/lab/Pagination'
-// import debounce from 'debounce'
 import {
   StyledLink,
   StyledImgContainer,
@@ -64,7 +63,7 @@ const Home: React.FC<{ path: string; page?: string }> = () => {
                       <StyledImgContainer>
                         <img
                           src={`https://nba-players.herokuapp.com/players/${last_name}/${first_name}`}
-                          alt={`${first_name} ${last_name} photo`}
+                          alt={`${first_name} ${last_name}`}
                           loading="lazy"
                         />
                       </StyledImgContainer>
