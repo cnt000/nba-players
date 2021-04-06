@@ -62,4 +62,3 @@ export const StyledEmptyResult = styled.div`
   padding: 0.4rem;
   margin-top: 1rem;
 `
-
