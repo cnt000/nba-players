@@ -1,35 +1,35 @@
-export interface Players {
-  data?: Player[]
-  meta?: Meta
+export interface IPlayers {
+  data?: IPlayer[]
+  meta?: IMeta
 }
 
-export interface Player {
+export interface IPlayer {
   id: number
   first_name: string
   height_feet?: number | null
   height_inches?: number | null
   last_name: string
   position?: string
-  team?: Team
+  team?: ITeam
   weight_pounds?: number | null
 }
 
-export interface Team {
+export interface ITeam {
   id?: number
   abbreviation?: string
   city?: string
-  conference?: Conference
+  conference?: IConference
   division?: string
   full_name?: string
   name?: string
 }
 
-export enum Conference {
+export enum IConference {
   East = 'East',
   West = 'West',
 }
 
-export interface Meta {
+export interface IMeta {
   total_pages: number
   current_page: number
   next_page: number

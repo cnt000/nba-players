@@ -11,22 +11,22 @@ import {
 import TextField from '@material-ui/core/TextField'
 import Layout from '../../components/Layout'
 
-const Home: React.FC<{ path: string; page?: string }> = () => {
+const Home: React.FC<{ path: string }> = () => {
   const location = useLocation()
   const urlParams = new URLSearchParams(location.search)
   const search = urlParams.get('search') || ''
   const currentPage = +(urlParams.get('page') || 1)
   const [searchText, setSearchText] = useState(search)
-  const [aPage, setAPage] = useState(currentPage)
-  const { players, meta } = useLoadPlayers(searchText, aPage)
+  const [page, setPage] = useState(currentPage)
+  const { players, meta } = useLoadPlayers(searchText, page)
 
   const handleSearch = (value: string) => {
     setSearchText(value)
-    setAPage(1)
+    setPage(1)
   }
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    setAPage(value)
+    setPage(value)
   }
 
   return (
@@ -88,7 +88,7 @@ const Home: React.FC<{ path: string; page?: string }> = () => {
         <PaginationContainer>
           {players.length > 0 && (
             <Pagination
-              page={aPage}
+              page={page}
               onChange={handleChange}
               count={meta.total_pages}
               color="primary"

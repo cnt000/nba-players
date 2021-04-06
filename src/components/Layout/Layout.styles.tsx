@@ -17,5 +17,18 @@ export const StyledSubHeader = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
   text-align: center;
   font-size: 1.4rem;
-  padding: 0.6rem;
+  height: 50px;
+  line-height: 50px;
 `
+
+export const StyledH2 = styled.div`
+  text-align: center;
+  position: relative;
+`
+
+export const StyledBackButton = styled.button`
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+`
+
