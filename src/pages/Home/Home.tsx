@@ -8,6 +8,7 @@ import {
   StyledInfoContainer,
   StyledPaginationContainer,
   StyledEmptyResult,
+  StyledForm,
 } from './Home.styles'
 import TextField from '@material-ui/core/TextField'
 import Layout from '../../components/Layout'
@@ -17,8 +18,10 @@ const Home: React.FC<{ path: string }> = () => {
   const urlParams = new URLSearchParams(location.search)
   const search = urlParams.get('search') || ''
   const currentPage = +(urlParams.get('page') || 1)
-  const [searchText, setSearchText] = useState(search)
-  const [page, setPage] = useState(currentPage)
+  const sanitizedSearch = /[\w]+/.test(search) ? search : ''
+  const sanitizedPage = /[0-9]+/.test(currentPage.toString()) ? currentPage : 1
+  const [searchText, setSearchText] = useState(sanitizedSearch)
+  const [page, setPage] = useState(sanitizedPage)
   const { players, meta } = useLoadPlayers(searchText, page)
 
   const handleSearch = (value: string) => {
@@ -33,7 +36,7 @@ const Home: React.FC<{ path: string }> = () => {
   return (
     <Layout title={''}>
       <>
-        <form>
+        <StyledForm>
           <TextField
             id="searchText"
             type="text"
@@ -43,7 +46,7 @@ const Home: React.FC<{ path: string }> = () => {
             label="search for a player"
             variant="filled"
           />
-        </form>
+        </StyledForm>
         <ul>
           {players.length === 0 ? (
             <StyledEmptyResult>No results</StyledEmptyResult>

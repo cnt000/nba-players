@@ -48,6 +48,8 @@ export const StyledLink = styled(Link)`
   padding: 0.4rem 1rem;
   height: 120px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
+  border-left: 1px solid ${({ theme }) => theme.colors.grey};
+  border-right: 1px solid ${({ theme }) => theme.colors.grey};
 `
 
 export const StyledPaginationContainer = styled.div`
@@ -61,4 +63,9 @@ export const StyledEmptyResult = styled.div`
   justify-content: center;
   padding: 0.4rem;
   margin-top: 1rem;
+`
+
+export const StyledForm = styled.form`
+  border-left: 1px solid ${({ theme }) => theme.colors.grey};
+  border-right: 1px solid ${({ theme }) => theme.colors.grey};
 `

@@ -6,6 +6,7 @@ export const StyledHeader = styled.header`
   margin: 0;
   padding: 1rem;
   font-size: 1.8rem;
+  text-align: center;
 `
 
 export const StyledLogo = styled.img`
@@ -30,4 +31,9 @@ export const StyledBackButton = styled.button`
   position: absolute;
   left: 5px;
   bottom: 10px;
+`
+
+export const StyledMain = styled.main`
+  max-width: 600px;
+  margin: 0 auto;
 `

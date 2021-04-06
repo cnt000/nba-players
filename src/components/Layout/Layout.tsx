@@ -6,6 +6,7 @@ import {
   StyledSubHeader,
   StyledH2,
   StyledBackButton,
+  StyledMain,
 } from './Layout.styles'
 import logo from './logo.svg'
 
@@ -39,7 +40,7 @@ const Layout: React.FC<Props> = ({ children, title = '' }: Props) => {
           </StyledH2>
         </StyledSubHeader>
       )}
-      <main>{children}</main>
+      <StyledMain>{children}</StyledMain>
     </>
   )
 }
