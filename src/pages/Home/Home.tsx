@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useLocation } from '@reach/router'
 import { useLoadPlayers } from '../../hooks/useLoadPlayers'
-import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '@material-ui/lab/Pagination'
 // import debounce from 'debounce'
 import {
   StyledLink,
@@ -27,8 +27,8 @@ const Home: React.FC<{ path: string; page?: string }> = () => {
   }
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    setAPage(value);
-  };
+    setAPage(value)
+  }
 
   return (
     <Layout title={''}>
@@ -87,7 +87,14 @@ const Home: React.FC<{ path: string; page?: string }> = () => {
           )}
         </ul>
         <PaginationContainer>
-          {players.length > 0 && <Pagination page={aPage} onChange={handleChange} count={meta.total_pages} color="primary" />}
+          {players.length > 0 && (
+            <Pagination
+              page={aPage}
+              onChange={handleChange}
+              count={meta.total_pages}
+              color="primary"
+            />
+          )}
         </PaginationContainer>
       </>
     </Layout>

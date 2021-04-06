@@ -15,7 +15,7 @@ export const StyledLogo = styled.img`
 
 export const StyledSubHeader = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
- text-align: center;
- font-size: 1.4rem;
- padding: 0.6rem;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0.6rem;
 `

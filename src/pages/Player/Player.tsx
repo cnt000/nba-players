@@ -25,9 +25,7 @@ const Player: React.FC<{ path: string; id?: string }> = ({ path, id }) => {
           src={`https://nba-players.herokuapp.com/players/${player.last_name.toLowerCase()}/${player.first_name.toLowerCase()}`}
           alt=""
         />
-        <p>
-          asdasdasdas
-        </p>
+        <p>asdasdasdas</p>
       </div>
     </Layout>
   )
