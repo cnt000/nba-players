@@ -1,29 +1,34 @@
 import React from 'react'
 import { Link, useLocation, navigate } from '@reach/router'
+import { StyledHeader, StyledLogo, StyledSubHeader } from './Layout.styles'
+import logo from '../../components/HomeCounter/logo.svg'
 
 type Props = {
   children: JSX.Element
   title?: string
 }
 
-const Layout: React.FC<Props> = ({ children, title = 'title' }: Props) => {
+const Layout: React.FC<Props> = ({ children, title = '' }: Props) => {
   const location = useLocation()
   const isHp = location.pathname === '/'
 
   return (
     <>
-      <header>
-        {!isHp && <button onClick={() => navigate(-1)}>🔙</button>}
+      <StyledHeader>
         <h1>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <StyledLogo src={logo} alt="logo" /> Players
+          </Link>
         </h1>
-      </header>
-      <div>
-        <h2>{title}</h2>
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/player/2933">Player 2933</Link>
-        </nav>
-      </div>
+      </StyledHeader>
+      {!isHp && (
+        <StyledSubHeader>
+          <h2>
+            {<button onClick={() => navigate(-1)}>🔙</button>}
+            {title}
+          </h2>
+        </StyledSubHeader>
+      )}
       <main>{children}</main>
     </>
   )

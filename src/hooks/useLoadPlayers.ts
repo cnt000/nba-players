@@ -20,9 +20,8 @@ export const useLoadPlayers = (searchText: string, aPage: number) => {
     total_count: 1,
   })
 
-  const history = createHistory(window as any)
-
   useEffect(() => {
+    const history = createHistory(window as any)
     const loadData = async () => {
       const result = await fetch(
         `https://www.balldontlie.io/api/v1/players?search=${searchText}&page=${aPage}&per_page=25`
@@ -31,11 +30,9 @@ export const useLoadPlayers = (searchText: string, aPage: number) => {
       setPlayers(data)
       setMeta(meta)
     }
-    // if (searchText.length > 1) {
     loadData()
-    // }
     history.navigate(`/?page=${aPage}&search=${searchText}`)
-  }, [searchText, aPage, history])
+  }, [searchText, aPage])
 
   return { players, meta }
 }

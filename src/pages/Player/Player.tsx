@@ -19,14 +19,14 @@ const Player: React.FC<{ path: string; id?: string }> = ({ path, id }) => {
   }, [id])
 
   return (
-    <Layout title={`Player ${id}`}>
+    <Layout title={`${player.first_name} ${player.last_name}`}>
       <div>
         <img
           src={`https://nba-players.herokuapp.com/players/${player.last_name.toLowerCase()}/${player.first_name.toLowerCase()}`}
           alt=""
         />
         <p>
-          {player.first_name} {player.last_name}
+          asdasdasdas
         </p>
       </div>
     </Layout>

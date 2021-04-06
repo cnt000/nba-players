@@ -31,6 +31,17 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
   @keyframes App-logo-float {
     0% {
       transform: translateY(0);
