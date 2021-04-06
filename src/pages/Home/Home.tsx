@@ -6,7 +6,8 @@ import {
   StyledLink,
   StyledImgContainer,
   StyledInfoContainer,
-  PaginationContainer,
+  StyledPaginationContainer,
+  StyledEmptyResult,
 } from './Home.styles'
 import TextField from '@material-ui/core/TextField'
 import Layout from '../../components/Layout'
@@ -45,7 +46,7 @@ const Home: React.FC<{ path: string }> = () => {
         </form>
         <ul>
           {players.length === 0 ? (
-            <div>No results</div>
+            <StyledEmptyResult>No results</StyledEmptyResult>
           ) : (
             players.map(
               ({
@@ -85,7 +86,7 @@ const Home: React.FC<{ path: string }> = () => {
             )
           )}
         </ul>
-        <PaginationContainer>
+        <StyledPaginationContainer>
           {players.length > 0 && (
             <Pagination
               page={page}
@@ -94,7 +95,7 @@ const Home: React.FC<{ path: string }> = () => {
               color="primary"
             />
           )}
-        </PaginationContainer>
+        </StyledPaginationContainer>
       </>
     </Layout>
   )

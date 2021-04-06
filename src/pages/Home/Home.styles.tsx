@@ -50,8 +50,16 @@ export const StyledLink = styled(Link)`
   border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
 `
 
-export const PaginationContainer = styled.div`
+export const StyledPaginationContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 0.4rem;
 `
+
+export const StyledEmptyResult = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem;
+  margin-top: 1rem;
+`
+
