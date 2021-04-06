@@ -29,6 +29,7 @@ Run test
 ### `yarn type-check`
 
 Run Typescript type check
+
 ### `yarn format`
 
 Run prettier to format code

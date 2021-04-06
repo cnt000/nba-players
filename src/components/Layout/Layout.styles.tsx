@@ -31,4 +31,3 @@ export const StyledBackButton = styled.button`
   left: 5px;
   bottom: 10px;
 `
-

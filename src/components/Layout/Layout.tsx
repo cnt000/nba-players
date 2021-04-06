@@ -1,6 +1,12 @@
 import React from 'react'
 import { Link, useLocation, navigate } from '@reach/router'
-import { StyledHeader, StyledLogo, StyledSubHeader, StyledH2, StyledBackButton } from './Layout.styles'
+import {
+  StyledHeader,
+  StyledLogo,
+  StyledSubHeader,
+  StyledH2,
+  StyledBackButton,
+} from './Layout.styles'
 import logo from './logo.svg'
 
 type Props = {
@@ -24,7 +30,11 @@ const Layout: React.FC<Props> = ({ children, title = '' }: Props) => {
       {!isHp && (
         <StyledSubHeader>
           <StyledH2>
-            {<StyledBackButton onClick={() => navigate(-1)}>🔙</StyledBackButton>}
+            {
+              <StyledBackButton onClick={() => navigate(-1)}>
+                🔙
+              </StyledBackButton>
+            }
             <span>{title}</span>
           </StyledH2>
         </StyledSubHeader>
