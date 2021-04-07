@@ -4,6 +4,7 @@ import { IPlayer, IMeta } from '../types/ApiResponse'
 
 export const useLoadPlayers = (searchText: string, aPage: number) => {
   const [players, setPlayers] = useState<IPlayer[]>([])
+  const [loading, setLoading] = useState(false)
 
   const [meta, setMeta] = useState<IMeta>({
     total_pages: 1,
@@ -22,10 +23,12 @@ export const useLoadPlayers = (searchText: string, aPage: number) => {
       const { data, meta } = await result.json()
       setPlayers(data)
       setMeta(meta)
+      setLoading(false)
     }
+    setLoading(true)
     loadData()
     history.navigate(`/?page=${aPage}&search=${searchText}`)
   }, [searchText, aPage])
 
-  return { players, meta }
+  return { players, meta, loading }
 }
