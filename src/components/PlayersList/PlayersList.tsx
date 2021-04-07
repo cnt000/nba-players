@@ -37,7 +37,10 @@ const PlayersList: React.FC<{
               weight_pounds,
             }) => (
               <li key={id}>
-                <StyledLink to={`/player/${id}`}>
+                <StyledLink
+                  to={`/player/${id}`}
+                  title={`Go to ${first_name} ${last_name} page`}
+                >
                   <StyledImgContainer>
                     <img
                       src={`${baseImagesUrl}/${last_name}/${first_name}`}
