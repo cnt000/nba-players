@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { IPlayer, IMeta } from '../../types/ApiResponse'
 import Pagination from '@material-ui/lab/Pagination'
 import {
@@ -13,8 +13,8 @@ const PlayersList: React.FC<{
   players: IPlayer[]
   meta: IMeta
   sanitizedPage: number
-}> = ({ players, meta, sanitizedPage }) => {
-  const [page, setPage] = useState(sanitizedPage)
+  setPage: any
+}> = ({ players, meta, sanitizedPage, setPage }) => {
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value)
   }
@@ -50,9 +50,9 @@ const PlayersList: React.FC<{
                         {first_name} {last_name}
                       </strong>
                       <span>Position: {position || '-'}</span>
-                      <span>Height (ft): {height_feet || '-'}</span>(
-                      <span>Height (in): {height_inches || '-'}</span>)
-                      <span>Weight (lbs): {weight_pounds || '-'} </span>
+                      <span>Height (ft): {height_feet || '-'}</span>
+                      <span>Height (in): {height_inches || '-'}</span>
+                      <span>Weight (lbs): {weight_pounds || '-'}</span>
                     </StyledInfoContainer>
                   </StyledLink>
                 </li>
@@ -64,7 +64,7 @@ const PlayersList: React.FC<{
       <StyledPaginationContainer>
         {players.length > 0 && (
           <Pagination
-            page={page}
+            page={sanitizedPage}
             onChange={handleChange}
             count={meta.total_pages}
             color="primary"

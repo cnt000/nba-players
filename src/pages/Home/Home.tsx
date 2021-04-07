@@ -16,7 +16,7 @@ const Home: React.FC<{ path: string }> = () => {
   const [searchText, setSearchText] = useState(sanitizedSearch)
   const [page, setPage] = useState(sanitizedPage)
 
-  const { players, meta, loading } = useLoadPlayers(searchText, sanitizedPage)
+  const { players, meta, loading } = useLoadPlayers(searchText, page)
 
   const handleSearch = (value: string) => {
     setSearchText(value)
@@ -39,7 +39,12 @@ const Home: React.FC<{ path: string }> = () => {
         </StyledForm>
         {loading && <StyledInfoText>Loading...</StyledInfoText>}
         {!loading && (
-          <PlayersList players={players} meta={meta} sanitizedPage={page} />
+          <PlayersList
+            players={players}
+            meta={meta}
+            sanitizedPage={page}
+            setPage={setPage}
+          />
         )}
       </>
     </Layout>
