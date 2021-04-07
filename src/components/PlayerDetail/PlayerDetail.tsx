@@ -29,18 +29,18 @@ const PlayerDetail: React.FC<{ player: IPlayer }> = ({ player }) => {
       <StyledRowContainer>
         <StyledInfoContainer>
           <strong>Info:</strong>
-          {position && <span>Position: {position}</span>}
-          {<span>Height (ft): {height_feet || '-'}</span>}
-          {height_inches && <span>Height (in): {height_inches}</span>}
-          {weight_pounds && <span>Weight (lbs): {weight_pounds} </span>}
+          <span>Position: {position || '-'}</span>
+          <span>Height (ft): {height_feet || '-'}</span>
+          <span>Height (in): {height_inches || '-'}</span>
+          <span>Weight (lbs): {weight_pounds || '-'} </span>
         </StyledInfoContainer>
         {team?.full_name && (
           <StyledInfoContainer>
             <strong>Team:</strong>
-            <span>Name: {team?.full_name}</span>
-            <span>City: {team?.city}</span>
-            <span>Conference: {team?.conference}</span>
-            <span>Division: {team?.division}</span>
+            <span>Name: {team.full_name}</span>
+            <span>City: {team?.city || '-'}</span>
+            <span>Conference: {team?.conference || '-'}</span>
+            <span>Division: {team?.division || '-'}</span>
           </StyledInfoContainer>
         )}
       </StyledRowContainer>

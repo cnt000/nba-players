@@ -37,3 +37,7 @@ Run prettier to format code
 ### `yarn lint`
 
 Run eslint to lint
+
+## Demo
+
+To try app follow this link: https://nba-players-helixa.surge.sh

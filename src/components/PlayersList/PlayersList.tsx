@@ -49,12 +49,10 @@ const PlayersList: React.FC<{
                       <strong>
                         {first_name} {last_name}
                       </strong>
-                      {position && <span>Position: {position}</span>}
-                      {height_feet && <span>Height (ft): {height_feet}</span>}
-                      {height_inches && (
-                        <span>Height (in): {height_inches}</span>
-                      )}
-                      {weight_pounds && <span>Weight: {weight_pounds} </span>}
+                      <span>Position: {position || '-'}</span>
+                      <span>Height (ft): {height_feet || '-'}</span>(
+                      <span>Height (in): {height_inches || '-'}</span>)
+                      <span>Weight (lbs): {weight_pounds || '-'} </span>
                     </StyledInfoContainer>
                   </StyledLink>
                 </li>
