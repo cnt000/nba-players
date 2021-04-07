@@ -8,6 +8,7 @@ import {
   StyledPaginationContainer,
   StyledInfoText,
 } from './PlayersList.styles'
+import { baseImagesUrl } from '../../conf/endpoints'
 
 const PlayersList: React.FC<{
   players: IPlayer[]
@@ -34,30 +35,28 @@ const PlayersList: React.FC<{
               height_feet,
               height_inches,
               weight_pounds,
-            }) => {
-              return (
-                <li key={id}>
-                  <StyledLink to={`/player/${id}`}>
-                    <StyledImgContainer>
-                      <img
-                        src={`https://nba-players.herokuapp.com/players/${last_name}/${first_name}`}
-                        alt={`${first_name} ${last_name}`}
-                        loading="lazy"
-                      />
-                    </StyledImgContainer>
-                    <StyledInfoContainer>
-                      <strong>
-                        {first_name} {last_name}
-                      </strong>
-                      <span>Position: {position || '-'}</span>
-                      <span>Height (ft): {height_feet || '-'}</span>
-                      <span>Height (in): {height_inches || '-'}</span>
-                      <span>Weight (lbs): {weight_pounds || '-'}</span>
-                    </StyledInfoContainer>
-                  </StyledLink>
-                </li>
-              )
-            }
+            }) => (
+              <li key={id}>
+                <StyledLink to={`/player/${id}`}>
+                  <StyledImgContainer>
+                    <img
+                      src={`${baseImagesUrl}/${last_name}/${first_name}`}
+                      alt={`${first_name} ${last_name}`}
+                      loading="lazy"
+                    />
+                  </StyledImgContainer>
+                  <StyledInfoContainer>
+                    <strong>
+                      {first_name} {last_name}
+                    </strong>
+                    <span>Position: {position || '-'}</span>
+                    <span>Height (ft): {height_feet || '-'}</span>
+                    <span>Height (in): {height_inches || '-'}</span>
+                    <span>Weight (lbs): {weight_pounds || '-'}</span>
+                  </StyledInfoContainer>
+                </StyledLink>
+              </li>
+            )
           )}
         </ul>
       )}

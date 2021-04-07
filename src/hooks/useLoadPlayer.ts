@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { IPlayer } from '../types/ApiResponse'
+import { baseAPIUrl } from '../conf/endpoints'
 
 export const useLoadPlayer = (id: number) => {
   const [player, setPlayer] = useState<IPlayer>({
@@ -12,9 +13,7 @@ export const useLoadPlayer = (id: number) => {
 
   useEffect(() => {
     const loadData = async () => {
-      const result = await fetch(
-        `https://www.balldontlie.io/api/v1/players/${id}`
-      )
+      const result = await fetch(`${baseAPIUrl}/${id}`)
       const data = await result.json()
       setPlayer(data)
       setLoading(false)

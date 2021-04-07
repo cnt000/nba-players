@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createHistory } from '@reach/router'
 import { IPlayer, IMeta } from '../types/ApiResponse'
+import { baseAPIUrl } from '../conf/endpoints'
 
 export const useLoadPlayers = (searchText: string, aPage: number) => {
   const [players, setPlayers] = useState<IPlayer[]>([])
@@ -18,7 +19,7 @@ export const useLoadPlayers = (searchText: string, aPage: number) => {
     const history = createHistory(window as any)
     const loadData = async () => {
       const result = await fetch(
-        `https://www.balldontlie.io/api/v1/players?search=${searchText}&page=${aPage}&per_page=25`
+        `${baseAPIUrl}?search=${searchText}&page=${aPage}&per_page=25`
       )
       const { data, meta } = await result.json()
       setPlayers(data)

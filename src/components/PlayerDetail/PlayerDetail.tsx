@@ -5,6 +5,7 @@ import {
   StyledInfoContainer,
   StyledRowContainer,
 } from './PlayerDetail.styles'
+import { baseImagesUrl } from '../../conf/endpoints'
 
 const PlayerDetail: React.FC<{ player: IPlayer }> = ({ player }) => {
   const {
@@ -21,7 +22,7 @@ const PlayerDetail: React.FC<{ player: IPlayer }> = ({ player }) => {
     <>
       <StyledImgContainer>
         <img
-          src={`https://nba-players.herokuapp.com/players/${last_name}/${first_name}`}
+          src={`${baseImagesUrl}/${last_name}/${first_name}`}
           alt={`${first_name} ${last_name}`}
           loading="lazy"
         />
