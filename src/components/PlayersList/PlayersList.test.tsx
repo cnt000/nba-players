@@ -63,9 +63,9 @@ describe('PlayersList shows players', () => {
   })
   it('show link to player detail with correct href', () => {
     const { getByRole } = render(Component, {})
-    expect((getByRole('link', { name: /Ike Anigbogu/ }) as HTMLAnchorElement).href).toMatch(
-      /\/player\/14/
-    )
+    expect(
+      (getByRole('link', { name: /Ike Anigbogu/ }) as HTMLAnchorElement).href
+    ).toMatch(/\/player\/14/)
   })
   it('Click on page dispatch setPage', () => {
     const { getByRole } = render(Component, {})

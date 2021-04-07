@@ -24,7 +24,9 @@ const Component = <PlayerDetail player={player} />
 describe('PlayerDetail shows infos', () => {
   it('image src is correct', () => {
     const { getByRole } = render(Component, {})
-    expect((getByRole('img') as HTMLImageElement).src).toEqual(`${baseImagesUrl}/Giordano/Mike`)
+    expect((getByRole('img') as HTMLImageElement).src).toEqual(
+      `${baseImagesUrl}/Giordano/Mike`
+    )
   })
   it('show position', () => {
     const { getByText } = render(Component, {})
