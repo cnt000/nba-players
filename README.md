@@ -41,3 +41,10 @@ Run eslint to lint
 ## Demo
 
 To try app follow this link: https://nba-players-helixa.surge.sh
+
+To deploy in surge static server do (you have to be logged):
+
+```
+$ yarn build
+$ surge build/ --domain nba-players-helixa.surge.sh
+```
